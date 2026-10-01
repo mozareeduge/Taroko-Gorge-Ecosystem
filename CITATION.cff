@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Taroko Gorge Ecosystem Archive"
+version: 2.0.0
+date-released: 2026-09-30
+authors:
+  - family-names: "Zare"
+    given-names: "Mohammad"
+    orcid: "https://orcid.org/0009-0002-9032-3614"
+repository-code: "https://github.com/mozareeduge/Taroko-Gorge-Ecosystem"
+keywords:
+  - generative poetry
+  - digital literature
+  - taroko gorge
+  - research archive
+  - python
+license: MIT

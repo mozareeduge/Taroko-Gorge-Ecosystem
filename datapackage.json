@@ -1,0 +1,151 @@
+{
+  "name": "taroko-gorge-ecosystem",
+  "title": "Taroko Gorge Ecosystem Archive — Public Metadata",
+  "description": "Metadata CSVs from the Taroko Gorge generative poetry archive. Covers 61 candidate URLs from seed sources related to Nick Montfort's Taroko Gorge (2009) and remixes. Raw HTML, screenshots, and full lexical arrays are stored in the private archive.",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "odc-pddl",
+      "title": "Open Data Commons Public Domain Dedication and License",
+      "path": "https://opendatacommons.org/licenses/pddl/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Taroko Archive Project",
+      "email": "mozareeduge@gmail.com",
+      "role": "author"
+    }
+  ],
+  "created": "2026-06-27",
+  "resources": [
+    {
+      "name": "taroko-links",
+      "title": "Collected Candidate Links",
+      "description": "All URLs collected from seed sources during link discovery.",
+      "path": "data/public/taroko_links.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {"name": "id", "type": "string", "description": "Candidate identifier"},
+          {"name": "url", "type": "string", "format": "uri", "description": "Candidate URL"},
+          {"name": "source_seed", "type": "string", "description": "Seed URL this link came from"},
+          {"name": "link_text", "type": "string", "description": "Anchor text of the link"},
+          {"name": "collected_at", "type": "datetime", "description": "ISO 8601 collection timestamp"}
+        ],
+        "primaryKey": ["id"]
+      }
+    },
+    {
+      "name": "download-log",
+      "title": "Download Log",
+      "description": "HTTP download results for each candidate URL.",
+      "path": "data/public/download_log.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {"name": "id", "type": "string", "description": "Archive identifier"},
+          {"name": "candidate_id", "type": "string", "description": "Foreign key to taroko_links"},
+          {"name": "url", "type": "string", "format": "uri"},
+          {"name": "status_code", "type": "integer", "description": "HTTP status code"},
+          {"name": "download_status", "type": "string", "description": "success/failed/skipped_cached"},
+          {"name": "content_type", "type": "string"},
+          {"name": "bytes", "type": "integer"},
+          {"name": "raw_html_path", "type": "string", "description": "Relative path to saved HTML"},
+          {"name": "downloaded_at", "type": "datetime"},
+          {"name": "error", "type": "string"}
+        ],
+        "primaryKey": ["id"]
+      }
+    },
+    {
+      "name": "inventory",
+      "title": "Metadata Inventory",
+      "description": "Extracted metadata and Taroko pattern scores for each downloaded page.",
+      "path": "data/public/inventory.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {"name": "id", "type": "string"},
+          {"name": "url", "type": "string", "format": "uri"},
+          {"name": "raw_html_path", "type": "string"},
+          {"name": "probable_taroko_score", "type": "integer", "description": "0–5 pattern match score"},
+          {"name": "title", "type": "string"},
+          {"name": "has_js", "type": "boolean"},
+          {"name": "array_names", "type": "string", "description": "Pipe-separated detected JS array names"},
+          {"name": "word_count", "type": "integer"},
+          {"name": "extracted_at", "type": "datetime"}
+        ],
+        "primaryKey": ["id"]
+      }
+    },
+    {
+      "name": "lexical-array-summary",
+      "title": "Lexical Array Summary",
+      "description": "Per-array summary (name, item count, sample items, hash) for each detected JS word array.",
+      "path": "data/public/lexical_array_summary.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {"name": "id", "type": "string", "description": "Work identifier"},
+          {"name": "url", "type": "string", "format": "uri"},
+          {"name": "array_name", "type": "string"},
+          {"name": "item_count", "type": "integer"},
+          {"name": "sample_items", "type": "string", "description": "First 5 items, pipe-separated"},
+          {"name": "array_hash", "type": "string", "description": "SHA256 of array content"},
+          {"name": "extracted_at", "type": "datetime"}
+        ]
+      }
+    },
+    {
+      "name": "runtime-sample-log",
+      "title": "Runtime Sample Log",
+      "description": "Playwright runtime sampling results (status, paths to screenshot and text trace).",
+      "path": "data/public/runtime_sample_log.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {"name": "id", "type": "string"},
+          {"name": "url", "type": "string", "format": "uri"},
+          {"name": "status", "type": "string", "description": "ok/error"},
+          {"name": "screenshot_path", "type": "string"},
+          {"name": "text_sample_path", "type": "string"},
+          {"name": "seconds", "type": "integer", "description": "Wait time before capture"},
+          {"name": "error", "type": "string"},
+          {"name": "captured_at", "type": "datetime"}
+        ],
+        "primaryKey": ["id"]
+      }
+    },
+    {
+      "name": "collect-links-log",
+      "title": "Collect Links Log",
+      "description": "Log of seed URLs processed during link collection.",
+      "path": "data/public/collect_links_log.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {"name": "seed_id", "type": "string"},
+          {"name": "seed_url", "type": "string", "format": "uri"},
+          {"name": "links_found", "type": "integer"},
+          {"name": "collected_at", "type": "datetime"}
+        ]
+      }
+    },
+    {
+      "name": "validation-summary",
+      "title": "Validation Summary",
+      "description": "Per-check results from the public corpus validator.",
+      "path": "data/public/validation_summary.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {"name": "check", "type": "string"},
+          {"name": "status", "type": "string"},
+          {"name": "detail", "type": "string"},
+          {"name": "validated_at", "type": "datetime"}
+        ]
+      }
+    }
+  ]
+}
