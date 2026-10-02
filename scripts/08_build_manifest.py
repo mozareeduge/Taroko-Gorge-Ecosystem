@@ -50,7 +50,7 @@ def build_manifest():
                 "note": "",
             })
 
-    for fname in ["README.md", "CLAUDE.md", "requirements.txt"]:
+    for fname in ["README.md", "docs/dev/AGENT_RULES.md", "requirements.txt"]:
         if os.path.isfile(fname):
             sha = utils.sha256_file(fname)
             size = os.path.getsize(fname)

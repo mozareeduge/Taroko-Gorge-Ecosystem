@@ -37,7 +37,7 @@ These contain only metadata, counts, URLs, and aggregate information:
 | Validation summary | data/public/validation_summary.csv | Aggregate counts |
 | All notes/*.md | notes/ | Analysis and documentation |
 | All scripts | scripts/ | Pipeline code |
-| CLAUDE.md | CLAUDE.md | Operational rules |
+| Agent rules | docs/dev/AGENT_RULES.md | Operational rules (moved from CLAUDE.md) |
 | README.md | README.md | Project documentation |
 
 ## Borderline Cases

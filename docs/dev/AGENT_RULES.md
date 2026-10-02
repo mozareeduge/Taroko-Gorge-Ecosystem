@@ -1,4 +1,4 @@
-# CLAUDE.md — Taroko Gorge Ecosystem Archive
+# Agent rules (formerly CLAUDE.md) — Taroko Gorge Ecosystem Archive
 
 ## Operational Rules
 
@@ -14,7 +14,7 @@
    - `archive/output_samples/`
    - `archive/extracted_full/`
    - `data/private/`
-   Only commit scripts, seeds, `data/public/*.csv`, `data/public/*.md`, notes, README, and CLAUDE.md.
+   Only commit scripts, seeds, `data/public/*.csv`, `data/public/*.md`, notes, and README.
 
 5. **Generated samples are traces, not the poem.** Runtime output from a generative work is one execution trace. The source code is the archival object.
 
