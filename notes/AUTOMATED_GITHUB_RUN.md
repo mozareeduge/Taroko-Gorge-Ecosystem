@@ -1,3 +1,5 @@
+> **Historical** (2026-10-02): the workflow described here was removed from the public repository; kept only as a record of how the first data run was made.
+
 # Automated GitHub Actions Run
 
 ## What This Workflow Does

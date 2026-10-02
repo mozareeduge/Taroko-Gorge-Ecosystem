@@ -1,3 +1,5 @@
+> **Historical** (2026-10-02): this was written for the private working repository ('This repository is private'). The public repository holds only the metadata tables, scripts and notes; see the root `README.md` and `PUBLIC_PRIVATE_BOUNDARY_V2.md`.
+
 # Taroko Gorge Ecosystem — Full Private Archive
 
 ## What Is Captured

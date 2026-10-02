@@ -1,3 +1,5 @@
+> **Superseded in part** (2026-10-02): the 'Paratext (Conditional on Live Capture)' section says capture is pending. A live capture was run on 2026-06-28 (51 of 53 pages; see `archive_mvp_v2_live_paratext_run_log.md`). Statement answers should be read with the later counts there.
+
 # What Can Now Be Asked (v2)
 
 Questions the v2 archive can answer reliably, with the evidence source for each.

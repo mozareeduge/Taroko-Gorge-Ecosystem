@@ -1,3 +1,5 @@
+> **Superseded in part** (2026-10-02): the `context_page_pending` status for we_0001 reflects the offline run; a later live capture was run on 2026-06-28 (see `archive_mvp_v2_live_paratext_run_log.md`).
+
 # Work Entity Reconciliation Report
 
 Generated: 2026-06-28  

@@ -1,3 +1,5 @@
+> **Superseded** (2026-10-02): the statement 'Only 1 explicit author statement is confirmed' and the notes that context-page capture failed describe the offline run. A later live-capture run (2026-06-28; see `archive_mvp_v2_live_paratext_run_log.md`) captured 51 of 53 context pages and recorded 2 `explicit_author_statement` rows, 1 `editorial_statement` and 1 `project_description` in the local statement layer. The origin of the second author-statement row (a captured context page) has not been re-audited in this public repository, because the private tables are not committed.
+
 # Archive MVP v2 — Final Report
 
 Generated: 2026-06-28

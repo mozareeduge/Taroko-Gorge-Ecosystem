@@ -1,3 +1,5 @@
+> **Superseded in part** (2026-10-02): the 'Paratext Sections' and 'ELC3 vs ELMCIP' items assume no context page was captured. In the later live run (2026-06-28; see `archive_mvp_v2_live_paratext_run_log.md`) 51 of 53 pages were captured; the ELMCIP pages (dl_0003, dl_0004) still returned HTTP 403. Other uncertainties (authorship, original array structure, rights) are unchanged.
+
 # What Remains Uncertain (v2)
 
 ## Author Attribution

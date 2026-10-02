@@ -1,3 +1,5 @@
+> **Superseded** (2026-10-02): 'all 53 fetches failed' describes the offline run only. In the later live run (2026-06-28; see `archive_mvp_v2_live_paratext_run_log.md`) 51 of 53 pages were captured and 3 section entries were marked present.
+
 # ELC Paratext Capture Report
 
 Generated: 2026-06-28

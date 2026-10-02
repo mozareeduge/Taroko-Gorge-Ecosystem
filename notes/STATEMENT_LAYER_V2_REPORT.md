@@ -1,3 +1,5 @@
+> **Superseded** (2026-10-02): the counts in this report (1 explicit author statement; ELC3 work page 'unresolved/not captured') are from the offline run. A later live-capture run (2026-06-28; see `archive_mvp_v2_live_paratext_run_log.md`) captured 51 of 53 context pages and recorded 2 `explicit_author_statement` rows, 1 `editorial_statement` and 1 `project_description` in the local statement layer. The origin of the second author-statement row (a captured context page) has not been re-audited in this public repository, because the private tables are not committed. The corrected taxonomy it describes still stands.
+
 # Statement Layer v2 Report
 
 Generated: 2026-06-28  

@@ -1,3 +1,5 @@
+> **Historical** (2026-10-02): the GitHub Actions workflows described here were removed from the public repository; this guide is kept only as a record of how the first data run was made.
+
 # How to Run the Pipeline on GitHub Actions
 
 This guide is for someone who has never used GitHub Actions before.

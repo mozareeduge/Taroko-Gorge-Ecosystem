@@ -1,3 +1,5 @@
+> **Superseded in part** (2026-10-02): the row count given for `elc_paratext_sections` (53) is from the offline run; the later live run produced 1124 section entries (see `archive_mvp_v2_live_paratext_run_log.md`).
+
 # Query Index v2 — Usage Guide
 
 ## Database

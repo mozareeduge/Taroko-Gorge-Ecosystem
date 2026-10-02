@@ -1,6 +1,8 @@
+> **Historical snapshot (2026-06-28)** (2026-10-02): the `archive-mvp-v2` branch and the commit hashes below no longer exist; all work is on `main`. Kept for the record of what was built in v2.
+
 # Repository State — Current
 
-**Branch**: archive-mvp-v2  
+**Branch (historical)**: archive-mvp-v2 (deleted)  
 **As of**: 2026-06-28
 
 ## Recent Git Log (--oneline -5)

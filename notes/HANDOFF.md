@@ -1,3 +1,5 @@
+> **Historical (June 2026)** (2026-10-02): this handoff predates the public release. The branch `claude/taroko-gorge-archive-yl062k`, the workflow `.github/workflows/taroko-public-metadata.yml` and the push instructions below no longer apply; the workflows were removed before release.
+
 # HANDOFF
 
 ## Current State
@@ -19,7 +21,7 @@ the Claude Code environment.
 - [x] notes/RUN_REPORT.md
 - [x] notes/GITHUB_ACTIONS_RUN_GUIDE.md
 - [x] .github/workflows/taroko-public-metadata.yml
-- [x] Pushed to branch: claude/taroko-gorge-archive-yl062k
+- [x] Pushed to branch: claude/taroko-gorge-archive-yl062k (historical)
 
 ## Hard Blocker (local execution only)
 

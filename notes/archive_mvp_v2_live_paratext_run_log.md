@@ -1,3 +1,5 @@
+> **Historical** (2026-10-02): a raw run log. The `archive-mvp-v2` branch and the GitHub Actions workflow named here no longer exist.
+
 # Archive MVP v2 Live Paratext Run Log
 
 Run date: 2026-06-28T13:25:31Z
