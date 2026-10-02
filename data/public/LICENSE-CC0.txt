@@ -1,0 +1,10 @@
+The metadata tables in this directory (data/public/*.csv) are dedicated to the
+public domain by Mohammad Zare under the CC0 1.0 Universal Public Domain
+Dedication: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+To the extent possible under law, the author has waived all copyright and
+related or neighbouring rights to these tables. The tables describe, but do not
+reproduce, third-party works; those works remain the property of their authors.
+
+The pipeline code in the rest of this repository is under the MIT License (see
+the LICENSE file at the repository root).

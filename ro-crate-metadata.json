@@ -4,43 +4,62 @@
     {
       "@type": "CreativeWork",
       "@id": "ro-crate-metadata.json",
-      "conformsTo": {"@id": "https://w3id.org/ro/crate/1.1"},
-      "about": {"@id": "./"}
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
     },
     {
       "@type": "Dataset",
       "@id": "./",
       "name": "Taroko Gorge Ecosystem Archive",
-      "description": "Research archive of Nick Montfort's Taroko Gorge (2009) and its remixes. Covers 61 candidate URLs: downloaded HTML/JS source files, extracted lexical arrays, Playwright screenshots and runtime text traces, and structured metadata. Source code is the primary archival object for generative works.",
+      "description": "Public metadata of a research archive of Nick Montfort's Taroko Gorge (2009) and its remixes: 61 candidate URLs, 61 fetch attempts (55 downloaded pages), a keyword-heuristic inventory, a summary of word-list sizes and hashes, and a log of runtime sampling, plus the pipeline scripts and working notes. Raw captured pages, screenshots, runtime text and full word arrays are not part of this public dataset because they reproduce third-party works. Source code is the primary archival object for generative works.",
       "dateCreated": "2026-06-27",
-      "license": {"@id": "https://creativecommons.org/publicdomain/zero/1.0/"},
+      "license": {
+        "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
       "author": {
-        "@type": "Person",
-        "@id": "mailto:mozareeduge@gmail.com",
-        "name": "Taroko Archive Project",
-        "email": "mozareeduge@gmail.com"
+        "@id": "https://orcid.org/0009-0002-9032-3614"
       },
       "hasPart": [
-        {"@id": "data/public/taroko_links.csv"},
-        {"@id": "data/public/download_log.csv"},
-        {"@id": "data/public/inventory.csv"},
-        {"@id": "data/public/lexical_array_summary.csv"},
-        {"@id": "data/public/runtime_sample_log.csv"},
-        {"@id": "data/public/collect_links_log.csv"},
-        {"@id": "data/public/validation_summary.csv"},
-        {"@id": "data/private/taroko_corpus_catalog.csv"},
-        {"@id": "data/private/archive_manifest.csv"},
-        {"@id": "data/private/taroko_query_index.sqlite"},
-        {"@id": "archive/extracted_full/lexical_arrays_full.json"},
-        {"@id": "archive/raw_html/"},
-        {"@id": "archive/screenshots/"},
-        {"@id": "archive/output_samples/"},
-        {"@id": "private_archive/taroko_full_archive.zip"},
-        {"@id": "notes/METHOD.md"},
-        {"@id": "notes/RUN_REPORT.md"},
-        {"@id": "notes/FULL_ARCHIVE_README.md"},
-        {"@id": "notes/ARCHIVE_QUERY_GUIDE.md"},
-        {"@id": "datapackage.json"}
+        {
+          "@id": "data/public/taroko_links.csv"
+        },
+        {
+          "@id": "data/public/download_log.csv"
+        },
+        {
+          "@id": "data/public/inventory.csv"
+        },
+        {
+          "@id": "data/public/lexical_array_summary.csv"
+        },
+        {
+          "@id": "data/public/runtime_sample_log.csv"
+        },
+        {
+          "@id": "data/public/collect_links_log.csv"
+        },
+        {
+          "@id": "data/public/validation_summary.csv"
+        },
+        {
+          "@id": "notes/METHOD.md"
+        },
+        {
+          "@id": "notes/RUN_REPORT.md"
+        },
+        {
+          "@id": "notes/FULL_ARCHIVE_README.md"
+        },
+        {
+          "@id": "notes/ARCHIVE_QUERY_GUIDE.md"
+        },
+        {
+          "@id": "datapackage.json"
+        }
       ],
       "mentions": [
         {
@@ -54,14 +73,27 @@
           "dateCreated": "2009",
           "description": "Generative JavaScript poetry by Nick Montfort. The archived works are Taroko Gorge and remix works derived from it."
         }
-      ]
+      ],
+      "citation": "Zare, M. (2026). Taroko Gorge Ecosystem Archive (Version 2.0.0). https://github.com/mozareeduge/Taroko-Gorge-Ecosystem",
+      "version": "2.0.0",
+      "url": "https://github.com/mozareeduge/Taroko-Gorge-Ecosystem"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0009-0002-9032-3614",
+      "name": "Mohammad Zare"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "name": "CC0 1.0 Universal (Public Domain Dedication)"
     },
     {
       "@type": "File",
       "@id": "data/public/taroko_links.csv",
       "name": "Collected Candidate Links",
       "encodingFormat": "text/csv",
-      "description": "All URLs collected from seed sources during link discovery (61 rows)."
+      "description": "All candidate URLs collected from seed sources during link discovery (61 rows)."
     },
     {
       "@type": "File",
@@ -90,67 +122,6 @@
       "name": "Runtime Sample Log",
       "encodingFormat": "text/csv",
       "description": "Playwright runtime sampling results: status, paths to screenshot and text trace."
-    },
-    {
-      "@type": "File",
-      "@id": "data/private/taroko_corpus_catalog.csv",
-      "name": "Corpus Catalog",
-      "encodingFormat": "text/csv",
-      "description": "Complete per-URL catalog joining all pipeline stages. Private: not published to public repo.",
-      "confidentialityIndicator": "private"
-    },
-    {
-      "@type": "File",
-      "@id": "data/private/archive_manifest.csv",
-      "name": "Archive Manifest",
-      "encodingFormat": "text/csv",
-      "description": "SHA256 checksums and metadata for every file in the archive.",
-      "confidentialityIndicator": "private"
-    },
-    {
-      "@type": "File",
-      "@id": "data/private/taroko_query_index.sqlite",
-      "name": "Query Index",
-      "encodingFormat": "application/vnd.sqlite3",
-      "description": "SQLite database with 10 tables + FTS5 for structured archive queries. Built from CSVs by scripts/10_build_query_index.py.",
-      "confidentialityIndicator": "private"
-    },
-    {
-      "@type": "File",
-      "@id": "archive/extracted_full/lexical_arrays_full.json",
-      "name": "Full Lexical Arrays",
-      "encodingFormat": "application/json",
-      "description": "Complete JS word arrays extracted from all probable Taroko source files.",
-      "confidentialityIndicator": "private"
-    },
-    {
-      "@type": "Dataset",
-      "@id": "archive/raw_html/",
-      "name": "Raw HTML Archive",
-      "description": "Downloaded HTML/JS source files for candidate URLs. Primary archival objects for generative works.",
-      "confidentialityIndicator": "private"
-    },
-    {
-      "@type": "Dataset",
-      "@id": "archive/screenshots/",
-      "name": "Screenshots",
-      "description": "Playwright screenshots of probable Taroko/remix pages at time of archiving.",
-      "confidentialityIndicator": "private"
-    },
-    {
-      "@type": "Dataset",
-      "@id": "archive/output_samples/",
-      "name": "Runtime Text Samples",
-      "description": "Visible text captured from runtime execution. One execution trace per page, supplementary to source.",
-      "confidentialityIndicator": "private"
-    },
-    {
-      "@type": "File",
-      "@id": "private_archive/taroko_full_archive.zip",
-      "name": "Full Archive Zip",
-      "encodingFormat": "application/zip",
-      "description": "Complete archive package including all private and public outputs.",
-      "confidentialityIndicator": "private"
     },
     {
       "@type": "File",
@@ -185,15 +156,37 @@
       "@id": "datapackage.json",
       "name": "Data Package Descriptor",
       "encodingFormat": "application/json",
-      "description": "Frictionless Data datapackage.json describing the 7 public metadata CSVs.",
-      "conformsTo": {"@id": "https://specs.frictionlessdata.io/data-package/"}
+      "description": "Frictionless Data descriptor for the 7 public metadata CSVs.",
+      "conformsTo": {
+        "@id": "https://specs.frictionlessdata.io/data-package/"
+      }
     },
     {
       "@type": "SoftwareSourceCode",
       "@id": "scripts/",
       "name": "Pipeline Scripts",
       "programmingLanguage": "Python",
-      "description": "Deterministic pipeline scripts: 01 collect_links → 02 download → 03 extract_metadata → 04 extract_lexical_arrays → 05 runtime_sample → 06 validate → 07 corpus_catalog → 08 manifest → 09 zip → 10 build_query_index → 11 query_archive → 12 verify_archive_package."
+      "description": "Deterministic pipeline scripts: 01 collect_links to 02 download to 03 extract_metadata to 04 extract_lexical_arrays to 05 runtime_sample to 06 validate to 07 corpus_catalog to 08 manifest to 09 zip to 10 build_query_index to 11 query_archive to 12 verify_archive_package.",
+      "license": {
+        "@id": "https://opensource.org/licenses/MIT"
+      },
+      "author": {
+        "@id": "https://orcid.org/0009-0002-9032-3614"
+      }
+    },
+    {
+      "@type": "File",
+      "@id": "data/public/collect_links_log.csv",
+      "name": "Link Collection Log",
+      "encodingFormat": "text/csv",
+      "description": "Per-seed record of the link-collection step (4 rows)."
+    },
+    {
+      "@type": "File",
+      "@id": "data/public/validation_summary.csv",
+      "name": "Validation Summary",
+      "encodingFormat": "text/csv",
+      "description": "Pipeline validation checks (21 rows). Some checks refer to local-only files that are not in this repository."
     }
   ]
 }

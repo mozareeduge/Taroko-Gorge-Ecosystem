@@ -14,4 +14,5 @@ keywords:
   - taroko gorge
   - research archive
   - python
+# Software licence. The public metadata tables in data/public/ are released under CC0 1.0 (see datapackage.json).
 license: MIT

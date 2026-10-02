@@ -1,19 +1,19 @@
 {
   "name": "taroko-gorge-ecosystem",
-  "title": "Taroko Gorge Ecosystem Archive — Public Metadata",
-  "description": "Metadata CSVs from the Taroko Gorge generative poetry archive. Covers 61 candidate URLs from seed sources related to Nick Montfort's Taroko Gorge (2009) and remixes. Raw HTML, screenshots, and full lexical arrays are stored in the private archive.",
-  "version": "1.0.0",
+  "title": "Taroko Gorge Ecosystem Archive - Public Metadata",
+  "description": "Public metadata tables from the Taroko Gorge Ecosystem Archive: 61 candidate URLs from four seed sources related to Nick Montfort's Taroko Gorge (2009) and its remixes, with fetch logs, a heuristic inventory and runtime-sampling logs. Raw HTML, screenshots, runtime text and full word arrays are kept locally and are not published.",
+  "version": "2.0.0",
   "licenses": [
     {
-      "name": "odc-pddl",
-      "title": "Open Data Commons Public Domain Dedication and License",
-      "path": "https://opendatacommons.org/licenses/pddl/"
+      "name": "CC0-1.0",
+      "title": "CC0 1.0 Universal (Public Domain Dedication)",
+      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
     }
   ],
   "contributors": [
     {
-      "title": "Taroko Archive Project",
-      "email": "mozareeduge@gmail.com",
+      "title": "Mohammad Zare",
+      "path": "https://orcid.org/0009-0002-9032-3614",
       "role": "author"
     }
   ],
@@ -27,13 +27,36 @@
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
-          {"name": "id", "type": "string", "description": "Candidate identifier"},
-          {"name": "url", "type": "string", "format": "uri", "description": "Candidate URL"},
-          {"name": "source_seed", "type": "string", "description": "Seed URL this link came from"},
-          {"name": "link_text", "type": "string", "description": "Anchor text of the link"},
-          {"name": "collected_at", "type": "datetime", "description": "ISO 8601 collection timestamp"}
+          {
+            "name": "id",
+            "type": "string",
+            "description": "Candidate identifier"
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "format": "uri",
+            "description": "Candidate URL"
+          },
+          {
+            "name": "source_seed",
+            "type": "string",
+            "description": "Seed URL this link came from"
+          },
+          {
+            "name": "link_text",
+            "type": "string",
+            "description": "Anchor text of the link"
+          },
+          {
+            "name": "collected_at",
+            "type": "datetime",
+            "description": "ISO 8601 collection timestamp"
+          }
         ],
-        "primaryKey": ["id"]
+        "primaryKey": [
+          "id"
+        ]
       }
     },
     {
@@ -44,18 +67,56 @@
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
-          {"name": "id", "type": "string", "description": "Archive identifier"},
-          {"name": "candidate_id", "type": "string", "description": "Foreign key to taroko_links"},
-          {"name": "url", "type": "string", "format": "uri"},
-          {"name": "status_code", "type": "integer", "description": "HTTP status code"},
-          {"name": "download_status", "type": "string", "description": "success/failed/skipped_cached"},
-          {"name": "content_type", "type": "string"},
-          {"name": "bytes", "type": "integer"},
-          {"name": "raw_html_path", "type": "string", "description": "Relative path to saved HTML"},
-          {"name": "downloaded_at", "type": "datetime"},
-          {"name": "error", "type": "string"}
+          {
+            "name": "id",
+            "type": "string",
+            "description": "Archive identifier"
+          },
+          {
+            "name": "candidate_id",
+            "type": "string",
+            "description": "Foreign key to taroko_links"
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "format": "uri"
+          },
+          {
+            "name": "status_code",
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          {
+            "name": "download_status",
+            "type": "string",
+            "description": "success/failed/skipped_cached"
+          },
+          {
+            "name": "content_type",
+            "type": "string"
+          },
+          {
+            "name": "bytes",
+            "type": "integer"
+          },
+          {
+            "name": "raw_html_path",
+            "type": "string",
+            "description": "Relative path to saved HTML"
+          },
+          {
+            "name": "downloaded_at",
+            "type": "datetime"
+          },
+          {
+            "name": "error",
+            "type": "string"
+          }
         ],
-        "primaryKey": ["id"]
+        "primaryKey": [
+          "id"
+        ]
       }
     },
     {
@@ -66,17 +127,49 @@
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
-          {"name": "id", "type": "string"},
-          {"name": "url", "type": "string", "format": "uri"},
-          {"name": "raw_html_path", "type": "string"},
-          {"name": "probable_taroko_score", "type": "integer", "description": "0–5 pattern match score"},
-          {"name": "title", "type": "string"},
-          {"name": "has_js", "type": "boolean"},
-          {"name": "array_names", "type": "string", "description": "Pipe-separated detected JS array names"},
-          {"name": "word_count", "type": "integer"},
-          {"name": "extracted_at", "type": "datetime"}
+          {
+            "name": "id",
+            "type": "string"
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "format": "uri"
+          },
+          {
+            "name": "raw_html_path",
+            "type": "string"
+          },
+          {
+            "name": "probable_taroko_score",
+            "type": "integer",
+            "description": "0–5 pattern match score"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "has_js",
+            "type": "boolean"
+          },
+          {
+            "name": "array_names",
+            "type": "string",
+            "description": "Pipe-separated detected JS array names"
+          },
+          {
+            "name": "word_count",
+            "type": "integer"
+          },
+          {
+            "name": "extracted_at",
+            "type": "datetime"
+          }
         ],
-        "primaryKey": ["id"]
+        "primaryKey": [
+          "id"
+        ]
       }
     },
     {
@@ -87,13 +180,38 @@
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
-          {"name": "id", "type": "string", "description": "Work identifier"},
-          {"name": "url", "type": "string", "format": "uri"},
-          {"name": "array_name", "type": "string"},
-          {"name": "item_count", "type": "integer"},
-          {"name": "sample_items", "type": "string", "description": "First 5 items, pipe-separated"},
-          {"name": "array_hash", "type": "string", "description": "SHA256 of array content"},
-          {"name": "extracted_at", "type": "datetime"}
+          {
+            "name": "id",
+            "type": "string",
+            "description": "Work identifier"
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "format": "uri"
+          },
+          {
+            "name": "array_name",
+            "type": "string"
+          },
+          {
+            "name": "item_count",
+            "type": "integer"
+          },
+          {
+            "name": "sample_items",
+            "type": "string",
+            "description": "First 5 items, pipe-separated"
+          },
+          {
+            "name": "array_hash",
+            "type": "string",
+            "description": "SHA256 of array content"
+          },
+          {
+            "name": "extracted_at",
+            "type": "datetime"
+          }
         ]
       }
     },
@@ -105,16 +223,45 @@
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
-          {"name": "id", "type": "string"},
-          {"name": "url", "type": "string", "format": "uri"},
-          {"name": "status", "type": "string", "description": "ok/error"},
-          {"name": "screenshot_path", "type": "string"},
-          {"name": "text_sample_path", "type": "string"},
-          {"name": "seconds", "type": "integer", "description": "Wait time before capture"},
-          {"name": "error", "type": "string"},
-          {"name": "captured_at", "type": "datetime"}
+          {
+            "name": "id",
+            "type": "string"
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "format": "uri"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "ok/error"
+          },
+          {
+            "name": "screenshot_path",
+            "type": "string"
+          },
+          {
+            "name": "text_sample_path",
+            "type": "string"
+          },
+          {
+            "name": "seconds",
+            "type": "integer",
+            "description": "Wait time before capture"
+          },
+          {
+            "name": "error",
+            "type": "string"
+          },
+          {
+            "name": "captured_at",
+            "type": "datetime"
+          }
         ],
-        "primaryKey": ["id"]
+        "primaryKey": [
+          "id"
+        ]
       }
     },
     {
@@ -125,10 +272,23 @@
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
-          {"name": "seed_id", "type": "string"},
-          {"name": "seed_url", "type": "string", "format": "uri"},
-          {"name": "links_found", "type": "integer"},
-          {"name": "collected_at", "type": "datetime"}
+          {
+            "name": "seed_id",
+            "type": "string"
+          },
+          {
+            "name": "seed_url",
+            "type": "string",
+            "format": "uri"
+          },
+          {
+            "name": "links_found",
+            "type": "integer"
+          },
+          {
+            "name": "collected_at",
+            "type": "datetime"
+          }
         ]
       }
     },
@@ -140,10 +300,22 @@
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
-          {"name": "check", "type": "string"},
-          {"name": "status", "type": "string"},
-          {"name": "detail", "type": "string"},
-          {"name": "validated_at", "type": "datetime"}
+          {
+            "name": "check",
+            "type": "string"
+          },
+          {
+            "name": "status",
+            "type": "string"
+          },
+          {
+            "name": "detail",
+            "type": "string"
+          },
+          {
+            "name": "validated_at",
+            "type": "datetime"
+          }
         ]
       }
     }
